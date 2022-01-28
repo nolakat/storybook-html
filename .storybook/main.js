@@ -17,37 +17,7 @@ module.exports = {
           // When using postCSS 8
           implementation: require('postcss'),
         },
-      },
-    }
-  ],
-  "framework": "@storybook/html",
-  // 👇 Retrieve the current environment from the configType argument
-  refs: (config, { configType }) => {
-    if (configType === 'DEVELOPMENT') {
-      return {
-        vue: {
-          title: 'Vue Storybook - Dev',
-          url: 'http://localhost:7007',
-        },
-        react: {
-          title: 'Vue Storybook - Dev',
-          url: 'http://localhost:6006',
-        }
-      };
-    }
-    return {
-      html: {
-        title: 'HTML',
-        url: ''
-      },
-      vue: {
-        title: 'Vue- Prod',
-        url: 'https://sb-test-vue.netlify.app',
-      },
-      react: {
-        title: 'React',
-        url: 'https://sb-test-react.netlify.app',
       }
-    };
-  }
+    }
+  ]
 }
