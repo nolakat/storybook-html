@@ -59,7 +59,7 @@ export const createIconButton = ({
   btn.ariaPressed = "false"
   btn.addEventListener('click', onClick);
 
-  btn.className = `text-white py-3 px-4 hover:text-black border-2 border-black bg-black hover:bg-transparent rounded-md flex flex-row w-full justify-between hover--svg transition--default`
+  btn.className = `text-white py-3 px-4 hover:text-black border-2 border-black bg-black hover:bg-transparent rounded-md flex flex-row w-full justify-between hover--svg max-w-66 transition--default`
 
   return btn;
 }
