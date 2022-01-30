@@ -17,7 +17,8 @@ module.exports = {
           // When using postCSS 8
           implementation: require('postcss'),
         },
-      }
+      },
     }
-  ]
+  ],
+  "framework": "@storybook/html"
 }
