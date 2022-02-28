@@ -81,5 +81,11 @@
     "modernizr-config.json",
     "README.md"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@storybook/addon-a11y": "^6.4.19",
+    "@storybook/addon-storysource": "^6.4.19",
+    "storybook-addon-designs": "^6.2.1",
+    "storybook-dark-mode": "^1.0.9"
+  }
 }

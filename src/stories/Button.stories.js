@@ -2,7 +2,7 @@ import { createButton, createIconButton } from './Button';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Control/Button',
+  title: 'Controls/Button',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     label: { control: 'text' },
@@ -23,7 +23,6 @@ const PrimaryTemplate = ({ label, ...args }) => {
 };
 
 const IconTemplate = ({ label, ...args }) =>{
-  console.log('TEST', args)
   return createIconButton({ label, args });
 }
 

@@ -1,4 +1,3 @@
-import './button.css';
 
 export const createButton = ({
   hollow = false,

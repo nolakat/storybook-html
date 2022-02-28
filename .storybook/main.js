@@ -5,6 +5,18 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "storybook-addon-designs",
+    '@storybook/addon-a11y',
+    'storybook-dark-mode',
+    '@storybook/addon-storysource',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        sourceLoaderOptions: {
+          injectStoryParameters: false,
+        },
+      },
+    },
     {
       name: '@storybook/addon-postcss',
       options: {
