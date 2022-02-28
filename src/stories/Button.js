@@ -4,6 +4,7 @@ export const createButton = ({
   size = 'small',
   label,
   onClick,
+  background = 'light',
 }) => {
   const btn = document.createElement('button');
   let btnPadding;
@@ -25,6 +26,12 @@ export const createButton = ({
   const onHover = hollow ?  'hover:bg-black hover:text-white hover:border-black' : 'hover:bg-white hover:text-black hover:border-white';
   const btnTransition = 'ease-in duration-300';
 
+  const wrapper = document.createElement('div');
+  const bgColor = background == 'light' ? 'white' : 'black'
+  wrapper.style.backgroundColor = bgColor;
+  wrapper.className = 'w-screen h-screen px-8 py-8';
+  wrapper.appendChild(btn)
+
 
   switch(size){
     case 'small':
@@ -35,7 +42,7 @@ export const createButton = ({
     break;
   }
   btn.className = `${isHollow} ${textWeight} ${isBorder} ${textSize} ${textColor} ${btnPadding} ${borderRadius} ${onHover} ${btnTransition}`;
-  return btn;
+  return wrapper;
 };
 
 export const createIcon = () =>{
@@ -48,7 +55,9 @@ export const createIcon = () =>{
 
 export const createIconButton = ({
   label,
-  onClick
+  onClick,
+  background,
+  hollow
 }) => {
   const btn = document.createElement('button');
   btn.innerHTML = `<span>${label}</span>${createIcon()}`;
@@ -58,7 +67,14 @@ export const createIconButton = ({
   btn.ariaPressed = "false"
   btn.addEventListener('click', onClick);
 
+  const wrapper = document.createElement('div');
+  const bgColor = background == 'light' ? 'white' : 'black';
+  wrapper.style.backgroundColor = bgColor;
+  wrapper.className = 'w-screen h-screen px-8 py-8';
+  wrapper.appendChild(btn)
+
+
   btn.className = `text-white py-3 px-4 hover:text-black border-2 border-black bg-black hover:bg-transparent rounded-md flex flex-row w-full justify-between hover--svg max-w-66 transition--default`
 
-  return btn;
+  return wrapper;
 }

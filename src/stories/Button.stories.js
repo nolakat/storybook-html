@@ -12,6 +12,10 @@ export default {
       control: { type: 'select' },
       options: ['small', 'medium'],
     },
+    background:{
+      control: { type: 'select'},
+      options: ['light', 'dark']
+    }
   },
 };
 
@@ -23,7 +27,7 @@ const PrimaryTemplate = ({ label, ...args }) => {
 };
 
 const IconTemplate = ({ label, ...args }) =>{
-  return createIconButton({ label, args });
+  return createIconButton({ label, ...args });
 }
 
 export const Primary = PrimaryTemplate.bind({});
@@ -37,6 +41,7 @@ Primary.args = {
 export const Icon = IconTemplate.bind({});
 Icon.args = {
   hollow: true,
+  size: 'small',
   label: 'Button',
 };
 
