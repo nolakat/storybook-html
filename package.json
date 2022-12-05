@@ -23,7 +23,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
+    "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.16.8",
     "@babel/register": "^7.16.9",
     "@storybook/addon-actions": "^6.4.15",
